@@ -1,0 +1,10 @@
+name: Youtube
+main: me.Clarkcj.youtube.Youtube
+version: 1.5
+description: >
+             A Plugin That The Player What The Server's YouTube Channel
+commands:
+  youtube:
+    description: Sends YouTube Channel Information
+  twitch: 
+    description: Sends Twitch Channel Information
