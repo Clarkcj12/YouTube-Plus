@@ -9,6 +9,9 @@ The plugin allows you to be able to currently three Commands.
 It is able to be configured with two fields, one is YTChannel which is filled with a url linking to your YouTube Channel
 Twitch: url to server's twitch channel
 
+#Change Log
+v1.5 - Fixed command breakage possibility if you used an alias plugin. Also, added a new alias of /yt which is the same as /youtube
+
 # Future Updates 
 * Do a server broadcast for ops of the twitch channel and yt channel.
 * A Start command that will allow people with a perm or op to be able to do a comamnd such as /ytrecord or /youtuberecord which will do a Braodcast command to tell server that the user that started recording, if it is run like /ytrecord -server it will state the server has started recording with a link to the channel.
