@@ -22,7 +22,7 @@ public class Youtube extends JavaPlugin{
     @Override
     public void onEnable(){
     	PluginDescriptionFile pdfFile = this.getDescription();
-    	this.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() + "Has Been Enabled!");
+    	this.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() + " Has Been Enabled!");
     	getConfig().options().copyDefaults(true);
     	saveConfig();
   
@@ -30,11 +30,14 @@ public class Youtube extends JavaPlugin{
     
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		Player player = (Player) sender;
-		if (commandLabel.equalsIgnoreCase("YouTube")){
+		if (cmd.getName().equalsIgnoreCase("YouTube")){
 			player.sendMessage(ChatColor.GOLD + "Our Server's YouTube Channel is: "  + ChatColor.DARK_AQUA + getConfig().getString("YTChannel"));
-		}else if (commandLabel.equalsIgnoreCase("Twitch")){			
+		}else if (cmd.getName().equalsIgnoreCase("yt")){
+			player.sendMessage(ChatColor.GOLD + " Our Server's YouTube Channel is: " + ChatColor.DARK_AQUA + getConfig().getString("YTChannel"));
+		}else if (cmd.getName().equalsIgnoreCase("Twitch")){			
 			player.sendMessage(ChatColor.GOLD + "The Server's Twitch Channel is: " + ChatColor.DARK_AQUA + getConfig().getString("Twitch"));
 		}
+			
 		return false;
 	}
 }
