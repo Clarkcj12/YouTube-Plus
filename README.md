@@ -13,8 +13,8 @@ It is able to be configured with three fields.
 * Prefix: Be able to change the prefix of the broadcast.
 
 #Change Log
-v1.7 - Fixed errors given in console if you tried to do the command in console. Added Permissions, and broacasting of the youtube channel and twitch channel to the server.
-v1.5 - Fixed command breakage possibility if you used an alias plugin. Also, added a new alias of /yt which is the same as /youtube
+* v1.7 - Fixed errors given in console if you tried to do the command in console. Added Permissions, and broacasting of the youtube channel and twitch channel to the server.
+* v1.5 - Fixed command breakage possibility if you used an alias plugin. Also, added a new alias of /yt which is the same as /youtube
 
 # Future Updates 
 * A Start command that will allow people with a perm or op to be able to do a comamnd such as /ytrecord or /youtuberecord which will do a Braodcast command to tell server that the user that started recording, if it is run like /ytrecord -server it will state the server has started recording with a link to the channel.
