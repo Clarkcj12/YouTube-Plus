@@ -1,10 +1,24 @@
-name: Youtube
+name: YoutubePlus
 main: me.Clarkcj.youtube.Youtube
-version: 1.5
+version: 1.7
+author: Clarkcj (Corey Clark)
 description: >
              A Plugin That The Player What The Server's YouTube Channel
 commands:
   youtube:
     description: Sends YouTube Channel Information
+    aliases: yt
+    permission: youtube.record
+    permission-message: I am sorry, you don't have permission. But become a YouTuber by asking owner.
   twitch: 
     description: Sends Twitch Channel Information
+    permission: twitch.stream
+    permission-message: I am sorry, you don't have permission. But become a Streamer today, by asking owner.
+    
+permissions:
+  youtube.record:
+    description: Allows to broadcast to server that they are recording on YouTube
+    default: op
+  twitch.stream:
+    description: Allows to Broadcast to Server that They are streaming on Twitch
+    default: op
