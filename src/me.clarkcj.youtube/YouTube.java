@@ -1,5 +1,6 @@
 package me.Clarkcj.youtube;
 
+import java.io.IOException;
 import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
@@ -26,6 +27,12 @@ public class Youtube extends JavaPlugin{
     	this.saveDefaultConfig();
     	PluginDescriptionFile pdfFile = this.getDescription();
     	this.logger.info(pdfFile.getName() + " Version " + pdfFile.getVersion() + " Has Been Enabled!");
+    	  try {
+		        Metrics metrics = new Metrics(this);
+		        metrics.start();
+		    } catch (IOException e) {
+		        // Failed to submit the stats :-(
+		    }
     }
     
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
@@ -33,7 +40,7 @@ public class Youtube extends JavaPlugin{
 			if (args.length >= 2) {
 				if ( sender instanceof Player) {
 					Player p = ((Player)sender);
-					if ( p.hasPermission("youtube.record") || p.isOp() ) {
+					if ( p.hasPermission("youtubeplus.record") || p.isOp() ) {//Check to see if user has permissions
 						if ( args[0].equalsIgnoreCase("record") ) {
 							if ( args[1].equalsIgnoreCase("-server")) {
 								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + " Our Server is recording at §3 " + getConfig().getString("YTChannel") + "!");
@@ -44,29 +51,29 @@ public class Youtube extends JavaPlugin{
 					}
 				}
 			} else {
-				sender.sendMessage(ChatColor.GOLD + "Our Server's YouTube Channel is: "  + ChatColor.DARK_AQUA + getConfig().getString("YTChannel"));
+				sender.sendMessage(ChatColor.GOLD + "Our Server's YouTube Channel is: "  + ChatColor.DARK_AQUA + getConfig().getString("YTChannel"));//Output given if /yt or /youtube is done
 			}
 			return true;
 		} else if (cmd.getName().equalsIgnoreCase("Twitch")){
 			if (args.length >= 2) {
 				if ( sender instanceof Player) {
 					Player p = ((Player)sender);
-					if ( p.hasPermission("twith.stream") || p.isOp() ) {
-						if ( args[0].equalsIgnoreCase("stream") ) {
-							if ( args[1].equalsIgnoreCase("-server")) {
-								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + "Our Server is streaming at: §3 " + getConfig().getString("Twitch") + "!");
+					if ( p.hasPermission("twith.stream") || p.isOp() ) { //Check to see if user has the permission to do the /twitch stream commands
+						if ( args[0].equalsIgnoreCase("stream") ) { 
+							if ( args[1].equalsIgnoreCase("-server")) { 
+								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + "Our Server is streaming at: §3 " + getConfig().getString("Twitch") + "!"); //Broadcast if /twitch stream -server is done
 							} else {
-								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + " " + sender.getName() + " is streaming our server at " + args[1] + "!");
+								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + " " + sender.getName() + " is streaming our server at " + args[1] + "!"); //Broadcast if /twitch stream url is done
 							}
 						}
 					}
 				}
 			} else {
-				sender.sendMessage(ChatColor.GOLD + "The Server's Twitch Channel is: " + ChatColor.DARK_AQUA + getConfig().getString("Twitch"));
+				sender.sendMessage(ChatColor.GOLD + "The Server's Twitch Channel is: " + ChatColor.DARK_AQUA + getConfig().getString("Twitch"));  //Output if just /twitch is done
 			}
 			return true;
 		} else {
+		    }
 			return false;
 		}
-	}
 }
