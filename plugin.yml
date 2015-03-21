@@ -8,11 +8,9 @@ commands:
   youtube:
     description: Sends YouTube Channel Information
     aliases: yt
-    permission: youtubeplus.record
     permission-message: I am sorry, you don't have permission. But become a YouTuber by asking owner.
   twitch: 
     description: Sends Twitch Channel Information
-    permission: twitch.stream
     permission-message: I am sorry, you don't have permission. But become a Streamer today, by asking owner.
     
 permissions:
