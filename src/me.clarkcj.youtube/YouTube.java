@@ -58,7 +58,7 @@ public class Youtube extends JavaPlugin{
 			if (args.length >= 2) {
 				if ( sender instanceof Player) {
 					Player p = ((Player)sender);
-					if ( p.hasPermission("twith.stream") || p.isOp() ) { //Check to see if user has the permission to do the /twitch stream commands
+					if ( p.hasPermission("twitch") || p.isOp() ) { //Check to see if user has the permission to do the /twitch stream commands
 						if ( args[0].equalsIgnoreCase("stream") ) { 
 							if ( args[1].equalsIgnoreCase("-server")) { 
 								Bukkit.broadcastMessage(getConfig().getString("prefix").replace('&', '§') + " Our Server is streaming at: §3 " + getConfig().getString("Twitch") + "!"); //Broadcast if /twitch stream -server is done
