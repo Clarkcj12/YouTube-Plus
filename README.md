@@ -12,7 +12,13 @@ It is able to be configured with three fields.
 * YTChannel: url to YouTube Channel of the servers
 * Prefix: Be able to change the prefix of the broadcast.
 
+#Permission Nodes
+* ytp.* - Allows all perms
+* ytp.s - Allows usage of the streaming command
+* ytp.r - Allows usage of the recording command
+
 #Change Log
+* v1.7.8 - Fixed Permissions, added permissionde to premit both stream and record commands. Changed Permission nodes
 * v1.7 - Fixed errors given in console if you tried to do the command in console. Added Permissions, and broacasting of the youtube channel and twitch channel to the server.
 * v1.5 - Fixed command breakage possibility if you used an alias plugin. Also, added a new alias of /yt which is the same as /youtube
 
