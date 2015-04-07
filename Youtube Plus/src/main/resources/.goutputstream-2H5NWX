@@ -1,9 +1,9 @@
 name: YoutubePlus
 main: me.Clarkcj.youtube.Youtube
 version: 1.7.2
-author: Clarkcj (Corey Clark)
-description: >
-             Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
+author: Clarkcj
+authors: [Clarkcj, willies52002]
+description: Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
 commands:
   youtube:
     description: Sends YouTube Channel Information
@@ -14,9 +14,9 @@ commands:
     permission-message: I am sorry, you don't have permission. But become a Streamer today, by asking owner.
     
 permissions:
-  youtube.record:
-    description: Allows to broadcast to server that they are recording on YouTube
+  ytp.r:
+    description: Allows a Player to Broadcast to The Server That They are Recording on YouTube
     default: op
-  twitch.stream:
-    description: Allows to Broadcast to Server that They are streaming on Twitch
+  ytp.s:
+    description: Allows a Player to Broadcast to The Server that They are Streaming on Twitch
     default: op
