@@ -30,4 +30,4 @@ It is able to be configured with three fields.
 If you would like to leave a suggestion or feature request or have found a bug, please leave it in the bug tracker. Also if you would like to do a pull or push request feel free. Also if you would like to contribute to this repository, please send me a message.
 
 
-To download plugin you can do it here, http://dev.bukkit.org/media/files/870/167/youtube1.5.jar
+To download plugin you can do it here, http://dev.bukkit.org/media/files/873/577/YouTube-Plus-1.7.8.jar
