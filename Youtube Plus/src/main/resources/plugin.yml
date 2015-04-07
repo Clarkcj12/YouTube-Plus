@@ -14,6 +14,12 @@ commands:
     usage: /<command> [link]
     
 permissions:
+  ytp.*:
+    description: Allows Access to Both ytp.r and ytp.s Permission Nodes
+    default: op
+    children:
+      ytp.r: true
+      ytp.s: true
   ytp.r:
     description: Allows a Player to Broadcast to The Server That They are Recording on YouTube
     default: op
