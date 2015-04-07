@@ -20,16 +20,9 @@ public class TwitchExe implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		boolean isPlayer = (sender instanceof Player);
-		sender.sendMessage("isPlayer: " + isPlayer);
-		if (isPlayer) {
+		if (sender instanceof Player) {
 			Player p = ((Player) sender);
-			sender.sendMessage("args: " + args.length);
-			for ( String arg : args ) {
-				sender.sendMessage(" " + arg);
-			}
-			if (args.length >= 2) {
-				sender.sendMessage("hasPermission: " + (p.hasPermission("ytp.r") || p.isOp()));
+			if (args.length > 0) {
 				if (p.hasPermission("ytp.s") || p.isOp()) {
 					Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Streaming This Server at " + args[1] + " !");
 				} else {

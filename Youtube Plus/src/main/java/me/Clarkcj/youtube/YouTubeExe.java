@@ -22,7 +22,7 @@ public class YouTubeExe implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player p = ((Player) sender);
-			if (args.length >= 2) {
+			if (args.length > 0) {
 				if (p.hasPermission("ytp.r") || p.isOp()) {
 					Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[1] + " !");
 				} else {
