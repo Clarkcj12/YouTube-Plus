@@ -22,9 +22,17 @@ public class YouTubeExe implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player p = ((Player) sender);
-			if (args.length > 0) {
+			if (args.length >= 1) {
 				if (p.hasPermission("ytp.r") || p.isOp()) {
-					Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[1] + " !");
+					if ( args[0].equalsIgnoreCase("-server") ) {
+						if (p.hasPermission("ytp.r.server") || p.isOp()) {
+							Bukkit.broadcastMessage( prefix + " This Server is Being Recorded at " + serverYT + " !");
+						} else {
+							sender.sendMessage("§cMissing Permission Node: '§eytp.r.server§c'");
+						}
+					} else {
+						Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[0] + " !");
+					}
 				} else {
 					sender.sendMessage(prefix + " §6Our Server's YouTube Channel is: §3" + serverYT);
 				}
