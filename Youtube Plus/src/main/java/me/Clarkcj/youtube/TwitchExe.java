@@ -17,22 +17,21 @@ public class TwitchExe implements CommandExecutor {
 		this.prefix = prefix;
 		this.serverStream = channel;
 	}
-
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
 		if (sender instanceof Player) {
 			Player p = ((Player) sender);
 			if (args.length > 0) {
 				if (p.hasPermission("ytp.s") || p.isOp()) {
 					Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Streaming This Server at " + args[1] + " !");
 				} else {
-					sender.sendMessage(prefix + " ง6Our Server's Twitch Channel is: ง3" + serverStream);
+					sender.sendMessage(prefix + " ยง6Our Server's Twitch Channel is: ยง3" + serverStream);
 				}
 			} else {
-				sender.sendMessage(prefix + " ง6Our Server's Twitch Channel is: ง3" + serverStream);
+				sender.sendMessage(prefix + " ยง6Our Server's Twitch Channel is: ยง3" + serverStream);
 			}
 		} else {
-			sender.sendMessage(prefix + " ง6Our Server's Twitch Channel is: ง3" + serverStream);
+			sender.sendMessage(prefix + " ยง6Our Server's Twitch Channel is: ยง3" + serverStream);
 		}
 		return true;
 	}
