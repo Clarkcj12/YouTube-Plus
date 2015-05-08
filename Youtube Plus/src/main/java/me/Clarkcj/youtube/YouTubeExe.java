@@ -17,8 +17,7 @@ public class YouTubeExe implements CommandExecutor {
 		this.prefix = prefix;
 		this.serverYT = channel;
 	}
-
-	@Override
+	@Override	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player p = ((Player) sender);
@@ -26,13 +25,13 @@ public class YouTubeExe implements CommandExecutor {
 				if (p.hasPermission("ytp.r") || p.isOp()) {
 					Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[1] + " !");
 				} else {
-					sender.sendMessage(prefix + " ง6Our Server's YouTube Channel is: ง3" + serverYT);
+					sender.sendMessage(prefix + " ยง6Our Server's YouTube Channel is: ยง3" + serverYT);
 				}
 			} else {
-				sender.sendMessage(prefix + " ง6Our Server's YouTube Channel is: ง3" + serverYT);
+				sender.sendMessage(prefix + " ยง6Our Server's YouTube Channel is: ยง3" + serverYT);
 			}
 		} else {
-			sender.sendMessage(prefix + " ง6Our Server's YouTube Channel is: ง3" + serverYT);
+			sender.sendMessage(prefix + " ยง6Our Server's YouTube Channel is: ยง3" + serverYT);
 		}
 		return true;
 	}
