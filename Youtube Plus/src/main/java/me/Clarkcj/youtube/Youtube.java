@@ -17,8 +17,8 @@ public class Youtube extends JavaPlugin {
 		} catch (IOException e) {
 			System.out.println("Failed to Submit Metrics Data to MCStats");
 		}
-		getCommand("youtube").setExecutor(new YouTubeExe(this, getConfig().getString("prefix").replace('&', 'ง'), getConfig().getString("YTChannel")));
-		getCommand("twitch").setExecutor(new TwitchExe(this,getConfig().getString("prefix").replace('&', 'ง'), getConfig().getString("Twitch")));
+		getCommand("youtube").setExecutor(new YouTubeExe(this, getConfig().getString("prefix").replace('&', 'ยง'), getConfig().getString("YTChannel")));
+		getCommand("twitch").setExecutor(new TwitchExe(this,getConfig().getString("prefix").replace('&', 'ยง'), getConfig().getString("Twitch")));
 	}
 
 }
