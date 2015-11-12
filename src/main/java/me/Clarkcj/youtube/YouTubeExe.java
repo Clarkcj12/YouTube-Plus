@@ -17,8 +17,7 @@ public class YouTubeExe implements CommandExecutor {
 		this.prefix = prefix;
 		this.serverYT = channel;
 	}
-
-	@Override
+	@Override	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (sender instanceof Player) {
 			Player p = ((Player) sender);
@@ -26,21 +25,21 @@ public class YouTubeExe implements CommandExecutor {
 				if (p.hasPermission("ytp.r") || p.isOp()) {
 					if ( args[0].equalsIgnoreCase("-server") ) {
 						if (p.hasPermission("ytp.r.server") || p.isOp()) {
-							Bukkit.broadcastMessage( prefix + " This Server is Being Recorded at " + serverYT + " !");
+							Bukkit.broadcastMessage( prefix + " This Server is Being Recorded at \u00A7b" + serverYT + " !");
 						} else {
-							sender.sendMessage("§cMissing Permission Node: '§eytp.r.server§c'");
+							sender.sendMessage("\u00A7cMissing Permission Node: '\u00A7eytp.r.server\u00A7c'");
 						}
 					} else {
 						Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[0] + " !");
 					}
 				} else {
-					sender.sendMessage(prefix + " §6Our Server's YouTube Channel is: §3" + serverYT);
+					sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
 				}
 			} else {
-				sender.sendMessage(prefix + " §6Our Server's YouTube Channel is: §3" + serverYT);
+				sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
 			}
 		} else {
-			sender.sendMessage(prefix + " §6Our Server's YouTube Channel is: §3" + serverYT);
+			sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
 		}
 		return true;
 	}
