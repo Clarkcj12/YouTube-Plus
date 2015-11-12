@@ -102,3 +102,6 @@ hs_err_pid*
 
 # SVN Files
 .svn
+
+#Allow Releast of Compiled Jars
+!dist/*
