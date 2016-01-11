@@ -25,7 +25,7 @@ It is able to be configured with three fields.
 
 # Future Updates 
 * A Start command that will allow people with a perm or op to be able to do a command such as /ytrecord or /youtuberecord which will do a broadcast command to tell server that the user that started recording, if it is run like /ytrecord -server it will state the server has started recording with a link to the channel.
-* A Start command that will allow people with a perm or op to be able to do a command such as /twitcstream which will do a Braodcast command to tell server that the user that started broadcasting, if it is run like /twitchstream -server it will state the server has started streaming with a link to the stream.
+* A Start command that will allow people with a perm or op to be able to do a command such as /twitcstream which will do a Broadcast command to tell server that the user that started broadcasting, if it is run like /twitchstream -server it will state the server has started streaming with a link to the stream.
 * An Option To Be Able to add other options of streaming provider such as HitBox, Ustream, etc.
 
 If you would like to leave a suggestion or feature request or have found a bug, please leave it in the bug tracker. Also if you would like to do a pull or push request feel free. Also if you would like to contribute to this repository, please send me a message.
