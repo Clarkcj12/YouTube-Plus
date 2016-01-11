@@ -14,10 +14,8 @@ public class Youtube extends JavaPlugin {
 		System.out.println("|======================================|");
 		System.out.println("| Plugin: YouTubePlus                  |");
 		System.out.println("| Created By: Clarkcj                  |");
-		System.out.println("| Maintained By: willies952002         |");
-                System.out.println("| Version: 1.7.9                       |");
-		System.out.println("| \033[1;31mWARNING: THIS PLUGIN WILL BE UPDATED \033[0m|");
-		System.out.println("| \033[1;31m  A LOT IN THE UPCOMING WEEKS        \033[0m|");
+		System.out.println("| Contributions By: willies952002      |");
+		System.out.println("| Version: 2.0-dev                     |");
 		System.out.println("|======================================|");
 
 		this.saveDefaultConfig();
