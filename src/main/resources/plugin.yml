@@ -1,7 +1,7 @@
 name: YoutubePlus
 main: me.Clarkcj.youtube.Youtube
 version: 1.7.9
-authors: [Clarkcj, willies52002]
+authors: [Clarkcj, willies952002]
 description: Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
 commands:
   youtube:
