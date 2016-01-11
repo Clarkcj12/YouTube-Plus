@@ -8,14 +8,14 @@ import org.bukkit.entity.Player;
 
 public class YouTubeExe implements CommandExecutor {
 
-	Youtube main;
+	YouTubePlus main;
 	String prefix;
 	String serverYT;
 	
-	public YouTubeExe(Youtube main, String prefix, String channel) {
-		this.main = main;
-		this.prefix = prefix;
-		this.serverYT = channel;
+	public YouTubeExe() {
+		this.main = YouTubePlus.getInstance();
+		this.prefix = main.getConfig().getString("prefix");
+		this.serverYT = main.getConfig().getString("YTChannel");;
 	}
 	@Override	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
