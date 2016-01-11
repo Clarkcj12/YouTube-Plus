@@ -29,6 +29,7 @@ public class YouTubePlus extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("youtube").setExecutor(new YouTubeExe());
+        getCommand("stream").setExecutor(new StreamExe());
     }
 
     private void registerEvents() {
@@ -46,6 +47,10 @@ public class YouTubePlus extends JavaPlugin {
     
     public static YouTubePlus getInstance() {
         return instance;
+    }
+
+    public static String getPrefix() {
+        return instance.getConfig().getString("prefix");
     }
 
 }

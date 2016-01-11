@@ -9,7 +9,7 @@ commands:
     description: Sends YouTube Channel Information
     aliases: yt
     usage: /<command> [link]
-  twitch: 
+  stream:
     description: Sends Twitch Channel Information
     usage: /<command> [link]
     

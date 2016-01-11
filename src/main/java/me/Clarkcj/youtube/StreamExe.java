@@ -6,16 +6,16 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class TwitchExe implements CommandExecutor {
+public class StreamExe implements CommandExecutor {
 	
-	Youtube main;
+	YouTubePlus main;
 	String prefix;
 	String serverStream;
 	
-	public TwitchExe(Youtube main, String prefix, String channel) {
-		this.main = main;
-		this.prefix = prefix;
-		this.serverStream = channel;
+	public StreamExe() {
+		this.main = YouTubePlus.getInstance();
+		this.prefix = YouTubePlus.getPrefix();
+		this.serverStream = main.getConfig().getString("Twitch");
 	}
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
@@ -27,7 +27,7 @@ public class TwitchExe implements CommandExecutor {
 						if (p.hasPermission("ytp.s.server") || p.isOp()) {
 							Bukkit.broadcastMessage( prefix + " This Server is Being Live Streamed at \u00A7b" + serverStream + " !");
 						} else {
-							sender.sendMessage("§cMissing Permission Node: '\u00A7eytp.s.server\u00A7c'");
+							sender.sendMessage("\u00A7cMissing Permission Node: '\u00A7eytp.s.server\u00A7c'");
 						}
 					} else {
 						Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Streaming This Server at \u00A7b" + args[0] + " !");
