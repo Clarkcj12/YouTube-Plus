@@ -1,4 +1,4 @@
-package me.Clarkcj.youtube;
+package me.clarkcj.youtube;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

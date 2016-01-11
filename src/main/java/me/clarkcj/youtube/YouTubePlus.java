@@ -1,4 +1,4 @@
-package me.Clarkcj.youtube;
+package me.clarkcj.youtube;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mcstats.Metrics;
