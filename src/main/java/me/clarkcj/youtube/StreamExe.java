@@ -14,7 +14,7 @@ public class StreamExe implements CommandExecutor {
 	
 	public StreamExe() {
 		this.main = YouTubePlus.getInstance();
-		this.prefix = YouTubePlus.getPrefix();
+		this.prefix = main.getConfig().getString("prefix");;
 		this.serverStream = main.getConfig().getString("Twitch");
 	}
 	@Override
