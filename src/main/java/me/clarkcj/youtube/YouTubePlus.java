@@ -16,14 +16,13 @@ public class YouTubePlus extends JavaPlugin {
 
     @Override
 	public void onEnable() {
+        instance = this;
         enableMessage();
 		saveDefaultConfig();
-        getLogger().info("Config is Loaded: " + String.valueOf(!(getConfig() == null)) );
         registerEvents();
         registerCommands();
 		startMetrics();
         TaskChain.initialize(this);
-        getLogger().info("Prefix: " + getPrefix());
     }
 
     private void enableMessage() {

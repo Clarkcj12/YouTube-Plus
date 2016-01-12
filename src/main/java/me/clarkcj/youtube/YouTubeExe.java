@@ -14,7 +14,7 @@ public class YouTubeExe implements CommandExecutor {
 	
 	public YouTubeExe() {
 		this.main = YouTubePlus.getInstance();
-		this.prefix = main.getConfig().getString("prefix");
+		this.prefix = YouTubePlus.getPrefix();
 		this.serverYT = main.getConfig().getString("YTChannel");
 	}
 	@Override	
