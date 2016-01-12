@@ -18,8 +18,8 @@ public class YouTubePlus extends JavaPlugin {
 	public void onEnable() {
         enableMessage();
 		saveDefaultConfig();
-        registerCommands();
         registerEvents();
+        registerCommands();
 		startMetrics();
         TaskChain.initialize(this);
     }
@@ -34,6 +34,7 @@ public class YouTubePlus extends JavaPlugin {
     }
 
     private void registerCommands() {
+        getLogger().info("Registering Commands");
         getCommand("youtube").setExecutor(new YouTubeExe());
         getCommand("stream").setExecutor(new StreamExe());
     }
@@ -44,6 +45,7 @@ public class YouTubePlus extends JavaPlugin {
 
     private void startMetrics() {
         try {
+            getLogger().info("Starting Metrics");
             Metrics metrics = new Metrics(this);
             metrics.start();
         } catch (IOException e) {
