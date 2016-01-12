@@ -18,6 +18,7 @@ public class YouTubePlus extends JavaPlugin {
 	public void onEnable() {
         enableMessage();
 		saveDefaultConfig();
+        getLogger().info("Config is Loaded: " + String.valueOf(!(getConfig() == null)) );
         registerEvents();
         registerCommands();
 		startMetrics();
