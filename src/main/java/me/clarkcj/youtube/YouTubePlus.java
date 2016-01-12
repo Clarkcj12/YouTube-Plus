@@ -22,6 +22,7 @@ public class YouTubePlus extends JavaPlugin {
         registerCommands();
 		startMetrics();
         TaskChain.initialize(this);
+        getLogger().info("Prefix: " + getPrefix());
     }
 
     private void enableMessage() {
