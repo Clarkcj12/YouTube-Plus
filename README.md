@@ -32,5 +32,6 @@ It is able to be configured with three fields.
 
 If you would like to leave a suggestion or feature request or have found a bug, please leave it in the bug tracker. Also if you would like to do a pull or push request feel free. Also if you would like to contribute to this repository, please send me a message.
 
-
-To download plugin you can do it here: https://www.spigotmc.org/resources/youtubeplus.4989/
+# Download
+Spigot Page: https://www.spigotmc.org/resources/youtubeplus.4989/  
+Aquifer Page: (Coming Soon)
