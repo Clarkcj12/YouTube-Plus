@@ -1,6 +1,6 @@
 name: YoutubePlus
 main: me.clarkcj.youtube.YouTubePlus
-version: mvn-version
+version: 2.1-dev
 authors: [Clarkcj, willies952002]
 
 description: Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
