@@ -21,8 +21,8 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <id>destroystokyo-snapshots</id>
+            <url>https://repo.destroystokyo.com/content/repositories/snapshots/</url>
         </repository>
         <repository>
             <id>mvdw-software</id>
