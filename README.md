@@ -18,6 +18,8 @@ It is able to be configured with three fields.
 * ytp.r - Allows usage of the recording command
 
 #Change Log
+* v2.1-dev - Minor Version Bump with some protocol changes.
+* v2.0-dev - Added some experimential features.
 * v1.7.9 - Project Reboot
 * v1.7.8 - Fixed Permissions, added permission nodes to permit both stream and record commands. Changed Permission nodes
 * v1.7 - Fixed errors given in console if you tried to do the command in console. Added Permissions, and broadcasting of the youtube channel and twitch channel to the server.
