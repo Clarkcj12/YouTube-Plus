@@ -31,7 +31,7 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.0-dev                     |");
+        getLogger().info("| Version: 2.1-dev                     |");
         getLogger().info("|======================================|");
     }
 
