@@ -36,6 +36,8 @@ public class YouTubePlus extends JavaPlugin {
         getCommand("youtube").setExecutor(new YouTubeExe());
         getCommand("stream").setExecutor(new StreamExe());
         getCommand("beam").setExecutor(new BeamExe());
+        getCommand("ustream").setExecutor(new UstreamExe());
+        getCommand("LiveCoding").setExecutor(new LiveCodingExe());
     }
 
     private void registerEvents() {

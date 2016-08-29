@@ -15,6 +15,11 @@ commands:
   beam:
     description: Sends Beam Channel Information
     usage: /<command> [link]
+  ustream:
+    description: Sends Ustream Channel Information
+    usage: /<command> [link]
+  livecoding:
+    description: Sends LiveCoding Channel Information
     
 permissions:
   ytp.*:

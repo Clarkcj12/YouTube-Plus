@@ -1,8 +1,10 @@
 # This Is The Configuration File For YouTube Plus
 # Authors: Corey Clark (Clarkcj), and William Surgeon (willies952002)
-# Version 2.2-dev
+# Version 2.3-dev
 
 YTChannel: '<YouTube Channel Here>'
 Twitch: '<Twitch Channel Here>'
 Beam: '<Beam Channel Here>'
+LiveCoding: '<LiveCoding Channel Here>'
+Ustream: '<Ustream Channel Here>'
 prefix: '&7[&c&lYou&f&lTuber&7]'
