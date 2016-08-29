@@ -4,12 +4,15 @@ The plugin allows you to be able to currently three Commands.
 /twitch When run sends the player that started the command a message with the Twitch Channel of the server.
 /youtube When run sends the player that started the command a message with the YouTube Channel of the server.
 /yt An alias of the above command.
+/beam When run sends the player that started the command a message with the Beam Channel of the Server
+
 
 #Configuration
 It is able to be configured with three fields.
 
 * Twitch: url to twitch channel of the servers
 * YTChannel: url to YouTube Channel of the servers
+* Beam: url to Beam Channel of the servers
 * Prefix: Be able to change the prefix of the broadcast.
 
 #Permission Nodes
@@ -18,6 +21,7 @@ It is able to be configured with three fields.
 * ytp.r - Allows usage of the recording command
 
 #Change Log
+* v2.2-dev - Version Bump, added new Beam Command for Beam Channels
 * v2.1-dev - Minor Version Bump with some protocol changes.
 * v2.0-dev - Added some experimential features.
 * v1.7.9 - Project Reboot
