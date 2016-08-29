@@ -8,40 +8,41 @@ import org.bukkit.entity.Player;
 
 public class YouTubeExe implements CommandExecutor {
 
-	YouTubePlus main;
-	String prefix;
-	String serverYT;
-	
-	public YouTubeExe() {
-		this.main = YouTubePlus.getInstance();
-		this.prefix = YouTubePlus.getPrefix();
-		this.serverYT = main.getConfig().getString("YTChannel");
-	}
-	@Override	
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (sender instanceof Player) {
-			Player p = ((Player) sender);
-			if (args.length >= 1) {
-				if (p.hasPermission("ytp.r") || p.isOp()) {
-					if ( args[0].equalsIgnoreCase("-server") ) {
-						if (p.hasPermission("ytp.r.server") || p.isOp()) {
-							Bukkit.broadcastMessage( prefix + " This Server is Being Recorded at \u00A7b" + serverYT + " !");
-						} else {
-							sender.sendMessage("\u00A7cMissing Permission Node: '\u00A7eytp.r.server\u00A7c'");
-						}
-					} else {
-						Bukkit.broadcastMessage( prefix + " " + sender.getName() + " is Recording This Server at " + args[0] + " !");
-					}
-				} else {
-					sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
-				}
-			} else {
-				sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
-			}
-		} else {
-			sender.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
-		}
-		return true;
-	}
+    YouTubePlus main;
+    String prefix;
+    String serverYT;
+
+    public YouTubeExe() {
+        this.main = YouTubePlus.getInstance();
+        this.prefix = YouTubePlus.getPrefix();
+        this.serverYT = main.getConfig().getString("YTChannel");
+    }
+
+    @Override
+    public boolean onCommand(CommandSender s, Command c, String commandLabel, String[] a) {
+        if (s instanceof Player) {
+            Player p = ((Player) s);
+            if (a.length >= 1) {
+                if (p.hasPermission("ytp.r") || p.isOp()) {
+                    if (a[0].equalsIgnoreCase("-server")) {
+                        if (p.hasPermission("ytp.r.server") || p.isOp()) {
+                            Bukkit.broadcastMessage(prefix + " This Server is Being Recorded at \u00A7b" + serverYT + " !");
+                        } else {
+                            s.sendMessage("\u00A7cMissing Permission Node: '\u00A7eytp.r.server\u00A7c'");
+                        }
+                    } else {
+                        Bukkit.broadcastMessage(prefix + " " + s.getName() + " is Recording This Server at " + a[0] + " !");
+                    }
+                } else {
+                    s.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
+                }
+            } else {
+                s.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
+            }
+        } else {
+            s.sendMessage(prefix + " \u00A76Our Server's YouTube Channel is: \u00A7b" + serverYT);
+        }
+        return true;
+    }
 
 }

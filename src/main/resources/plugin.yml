@@ -1,6 +1,6 @@
 name: YoutubePlus
 main: me.clarkcj.youtube.YouTubePlus
-version: 2.1-dev
+version: mvn-version
 authors: [Clarkcj, willies952002]
 
 description: Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
@@ -11,6 +11,9 @@ commands:
     usage: /<command> [link]
   stream:
     description: Sends Twitch Channel Information
+    usage: /<command> [link]
+  beam:
+    description: Sends Beam Channel Information
     usage: /<command> [link]
     
 permissions:
@@ -24,5 +27,5 @@ permissions:
     description: Allows a Player to Broadcast to The Server That They are Recording on YouTube
     default: op
   ytp.s:
-    description: Allows a Player to Broadcast to The Server that They are Streaming on Twitch
+    description: Allows a Player to Broadcast to The Server that They are Streaming on a LiveStream Service
     default: op
