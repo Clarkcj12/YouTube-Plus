@@ -8,11 +8,11 @@
  * void any agreements with you, the third party. Thanks
  * ==================================================================
  */
-package me.clarkcj.youtube.experimental;
+package us.mcthemeparks.youtube.experimental;
 
 import com.domnian.util.TaskChain;
 import com.domnian.util.Util;
-import me.clarkcj.youtube.YouTubePlus;
+import us.mcthemeparks.youtube.YouTubePlus;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -88,5 +88,4 @@ public class StreamChecker implements Runnable {
             });
         };
     }
-
 }

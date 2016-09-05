@@ -1,5 +1,5 @@
 name: YoutubePlus
-main: me.clarkcj.youtube.YouTubePlus
+main: us.mcthemeparks.youtube.YouTubePlus
 version: mvn-version
 authors: [Clarkcj, willies952002]
 

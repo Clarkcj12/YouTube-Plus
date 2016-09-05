@@ -8,7 +8,7 @@
  * void any agreements with you, the third party. Thanks
  * ==================================================================
  */
-package me.clarkcj.youtube.experimental;
+package us.mcthemeparks.youtube.experimental;
 
 public enum StreamService {
 
@@ -24,5 +24,4 @@ public enum StreamService {
     StreamService(String link) {
         rootLink = link;
     }
-
 }

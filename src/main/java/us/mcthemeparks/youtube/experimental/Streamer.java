@@ -8,7 +8,7 @@
  * void any agreements with you, the third party. Thanks
  * ==================================================================
  */
-package me.clarkcj.youtube.experimental;
+package us.mcthemeparks.youtube.experimental;
 
 public class Streamer {
 
@@ -19,5 +19,4 @@ public class Streamer {
         this.name = name;
         this.service = service;
     }
-
 }

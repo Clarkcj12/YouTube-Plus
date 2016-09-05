@@ -1,4 +1,4 @@
-package me.clarkcj.youtube;
+package us.mcthemeparks.youtube;
 
 import com.domnian.util.TaskChain;
 import com.domnian.util.Util;
@@ -27,7 +27,7 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.1-dev                     |");
+        getLogger().info("| Version: 2.4-dev                     |");
         getLogger().info("|======================================|");
     }
 
