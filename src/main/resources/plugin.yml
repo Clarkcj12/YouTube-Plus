@@ -20,6 +20,9 @@ commands:
     usage: /<command> [link]
   livecoding:
     description: Sends LiveCoding Channel Information
+  hitbox:
+    description: Sends Hitbox Channel Information
+    usage: /<command> [link]
     
 permissions:
   ytp.*:

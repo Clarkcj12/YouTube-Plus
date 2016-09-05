@@ -6,13 +6,13 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class LiveCodingExe implements CommandExecutor {
+public class LivecodingExe implements CommandExecutor {
 
     YouTubePlus main;
     String prefix;
     String serverStream;
 
-    public LiveCodingExe() {
+    public LivecodingExe() {
         this.main = YouTubePlus.getInstance();
         this.prefix = YouTubePlus.getPrefix();
         this.serverStream = main.getConfig().getString("LiveCoding");
@@ -34,7 +34,7 @@ public class LiveCodingExe implements CommandExecutor {
                         Bukkit.broadcastMessage(prefix + " " + s.getName() + " is Streaming This Server at \u00A7b" + a[0] + " !");
                     }
                 } else {
-                    s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
+                    s.sendMessage(prefix + " \u00A76Our Server's LiveCoding Channel is: \u00A7b" + serverStream);
                 }
             } else {
                 s.sendMessage(prefix + " \u00A76Our Server's LiveCoding Channel is: \u00A7b" + serverStream);

@@ -27,7 +27,7 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.4-dev                     |");
+        getLogger().info("| Version: 2.5-dev                     |");
         getLogger().info("|======================================|");
     }
 
@@ -37,7 +37,8 @@ public class YouTubePlus extends JavaPlugin {
         getCommand("stream").setExecutor(new StreamExe());
         getCommand("beam").setExecutor(new BeamExe());
         getCommand("ustream").setExecutor(new UstreamExe());
-        getCommand("LiveCoding").setExecutor(new LiveCodingExe());
+        getCommand("LiveCoding").setExecutor(new LivecodingExe());
+        getCommand("hitbox").setExecutor(new HitBoxExe());
     }
 
     private void registerEvents() {
