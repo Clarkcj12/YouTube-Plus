@@ -34,7 +34,7 @@ public class YouTubePlus extends JavaPlugin {
     private void registerCommands() {
         getLogger().info("Registering Commands");
         getCommand("youtube").setExecutor(new YouTubeExe());
-        getCommand("stream").setExecutor(new StreamExe());
+        getCommand("twitch").setExecutor(new TwitchExe());
         getCommand("beam").setExecutor(new BeamExe());
         getCommand("ustream").setExecutor(new UstreamExe());
         getCommand("LiveCoding").setExecutor(new LivecodingExe());
