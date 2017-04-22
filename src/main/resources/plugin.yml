@@ -9,8 +9,9 @@ commands:
     description: Sends YouTube Channel Information
     aliases: yt
     usage: /<command> [link]
-  stream:
+  twitch:
     description: Sends Twitch Channel Information
+    aliases: stream
     usage: /<command> [link]
   beam:
     description: Sends Beam Channel Information
