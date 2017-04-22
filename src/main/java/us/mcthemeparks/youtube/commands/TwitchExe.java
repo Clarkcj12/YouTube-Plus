@@ -1,21 +1,22 @@
-package us.mcthemeparks.youtube;
+package us.mcthemeparks.youtube.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import us.mcthemeparks.youtube.YouTubePlus;
 
-public class UstreamExe implements CommandExecutor {
+public class TwitchExe implements CommandExecutor {
 
     YouTubePlus main;
     String prefix;
     String serverStream;
 
-    public UstreamExe() {
+    public TwitchExe() {
         this.main = YouTubePlus.getInstance();
         this.prefix = YouTubePlus.getPrefix();
-        this.serverStream = main.getConfig().getString("Ustream");
+        this.serverStream = main.getConfig().getString("Twitch");
     }
 
     @Override
@@ -34,13 +35,13 @@ public class UstreamExe implements CommandExecutor {
                         Bukkit.broadcastMessage(prefix + " " + s.getName() + " is Streaming This Server at \u00A7b" + a[0] + " !");
                     }
                 } else {
-                    s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
+                    s.sendMessage(prefix + " \u00A76Our Server's Twitch Channel is: \u00A7b" + serverStream);
                 }
             } else {
-                s.sendMessage(prefix + " \u00A76Our Server's Ustream Channel is: \u00A7b" + serverStream);
+                s.sendMessage(prefix + " \u00A76Our Server's Twitch Channel is: \u00A7b" + serverStream);
             }
         } else {
-            s.sendMessage(prefix + " \u00A76Our Server's Ustream Channel is: \u00A7b" + serverStream);
+            s.sendMessage(prefix + " \u00A76Our Server's Twitch Channel is: \u00A7b" + serverStream);
         }
         return true;
     }

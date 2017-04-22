@@ -1,21 +1,22 @@
-package us.mcthemeparks.youtube;
+package us.mcthemeparks.youtube.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import us.mcthemeparks.youtube.YouTubePlus;
 
-public class BeamExe implements CommandExecutor {
+public class UstreamExe implements CommandExecutor {
 
     YouTubePlus main;
     String prefix;
     String serverStream;
 
-    public BeamExe() {
+    public UstreamExe() {
         this.main = YouTubePlus.getInstance();
         this.prefix = YouTubePlus.getPrefix();
-        this.serverStream = main.getConfig().getString("Beam");
+        this.serverStream = main.getConfig().getString("Ustream");
     }
 
     @Override
@@ -37,10 +38,10 @@ public class BeamExe implements CommandExecutor {
                     s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
                 }
             } else {
-                s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
+                s.sendMessage(prefix + " \u00A76Our Server's Ustream Channel is: \u00A7b" + serverStream);
             }
         } else {
-            s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
+            s.sendMessage(prefix + " \u00A76Our Server's Ustream Channel is: \u00A7b" + serverStream);
         }
         return true;
     }
