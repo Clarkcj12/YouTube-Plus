@@ -6,13 +6,13 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class StreamExe implements CommandExecutor {
+public class TwitchExe implements CommandExecutor {
 
     YouTubePlus main;
     String prefix;
     String serverStream;
 
-    public StreamExe() {
+    public TwitchExe() {
         this.main = YouTubePlus.getInstance();
         this.prefix = YouTubePlus.getPrefix();
         this.serverStream = main.getConfig().getString("Twitch");
