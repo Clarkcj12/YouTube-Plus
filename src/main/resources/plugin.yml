@@ -24,6 +24,9 @@ commands:
   hitbox:
     description: Sends Hitbox Channel Information
     usage: /<command> [link]
+  ytpversion:
+    description: Sends Version Information
+    usage: /<command>
     
 permissions:
   ytp.*:
