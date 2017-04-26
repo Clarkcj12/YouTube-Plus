@@ -32,6 +32,14 @@
             <id>beam-snapshots</id>
             <url>https://maven.beam.pro/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>aikar</id>
+            <url>https://ci.emc.gs/nexus/content/groups/aikar/</url>
+        </repository>
+        <repository>
+            <id>bstats-repo</id>
+            <url>http://repo.bstats.org/content/repositories/releases/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -52,10 +60,14 @@
             <artifactId>api</artifactId>
             <version>1.10.2-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>org.bstats</groupId>
+            <artifactId>bstats-bukkit</artifactId>
+            <version>1.1</version>
+        </dependency>
     </dependencies>
 
     <build>
-        <defaultGoal>clean package</defaultGoal>
         <finalName>YouTubePlus</finalName>
         <plugins>
             <plugin>
@@ -66,32 +78,51 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--<plugin>-->
-                <!--<groupId>com.google.code.maven-replacer-plugin</groupId>-->
-                <!--<artifactId>replacer</artifactId>-->
-                <!--<version>1.5.3</version>-->
-                <!--<executions>-->
-                    <!--<execution>-->
-                        <!--<phase>validate</phase>-->
-                        <!--<goals>-->
-                            <!--<goal>replace</goal>-->
-                        <!--</goals>-->
-                    <!--</execution>-->
-                <!--</executions>-->
-                <!--<configuration>-->
-                    <!--<file>src/main/resources/plugin.yml</file>-->
-                    <!--<replacements>-->
-                        <!--<replacement>-->
-                            <!--<token>mvn-version</token>-->
-                            <!--<value>${project.version}</value>-->
-                        <!--</replacement>-->
-                    <!--</replacements>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>replacer</artifactId>
+                <version>1.5.3</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>replace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <file>src/main/resources/plugin.yml</file>
+                    <replacements>
+                        <replacement>
+                            <token>mvn-version</token>
+                            <value>${project.version}</value>
+                        </replacement>
+                    </replacements>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>2.4.2</version>
+                <configuration>
+                    <artifactSet>
+                        <includes>
+                            <include>org.bstats:*</include>
+                            <include>co.aikar:acf-core:*</include>
+                        </includes>
+                    </artifactSet>
+                    <relocations>
+                        <relocation>
+                            <pattern>org.bstats</pattern>
+                            <!-- Replace this with your package! -->
+                            <shadedPattern>us.mcthemeparks</shadedPattern>
+                        </relocation>
+                        <relocation>
+                            <pattern>co.aikar.commands</pattern>
+                            <shadedPattern>us.mcthemeparks.voiceplus.cmd.acf</shadedPattern>
+                        </relocation>
+                    </relocations>
+                </configuration>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -103,5 +134,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

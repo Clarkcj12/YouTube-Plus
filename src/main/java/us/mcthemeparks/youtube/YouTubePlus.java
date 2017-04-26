@@ -50,8 +50,8 @@ public class YouTubePlus extends JavaPlugin {
     private void startMetrics() {
         try {
             getLogger().info("Starting Metrics");
-            Metrics metrics = new Metrics(this);
-            metrics.start();
+            new org.mcstats.Metrics(this).start();
+            new org.bstats.Metrics(this);
         } catch (IOException e) {
             getLogger().severe("Failed to Submit Metrics Data to MCStats");
         }
