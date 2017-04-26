@@ -45,5 +45,4 @@ public class BeamExe implements CommandExecutor {
         }
         return true;
     }
-
 }

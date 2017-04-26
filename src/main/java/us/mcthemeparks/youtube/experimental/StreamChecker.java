@@ -10,8 +10,8 @@
  */
 package us.mcthemeparks.youtube.experimental;
 
-import com.domnian.util.TaskChain;
-import com.domnian.util.Util;
+import com.domnian.mcutils.TaskChain;
+import com.domnian.mcutils.Util;
 import us.mcthemeparks.youtube.YouTubePlus;
 import org.json.JSONObject;
 

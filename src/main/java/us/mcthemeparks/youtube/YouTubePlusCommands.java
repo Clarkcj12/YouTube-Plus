@@ -2,7 +2,7 @@ package us.mcthemeparks.youtube;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
-import com.domnian.util.Util;
+import com.domnian.mcutils.Util;
 import org.bukkit.entity.Player;
 
 /**

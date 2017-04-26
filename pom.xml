@@ -119,7 +119,7 @@
                     <relocations>
                         <relocation>
                             <pattern>org.bstats</pattern>
-                            <!-- Replace this with your package! -->
+                            <!-- Replace this with yconfigkage! -->
                             <shadedPattern>us.mcthemeparks</shadedPattern>
                         </relocation>
                         <relocation>

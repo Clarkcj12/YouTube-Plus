@@ -45,5 +45,4 @@ public class TwitchExe implements CommandExecutor {
         }
         return true;
     }
-
 }

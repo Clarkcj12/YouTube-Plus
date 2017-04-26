@@ -8,4 +8,6 @@ Beam: '<Beam Channel Here>'
 LiveCoding: '<LiveCoding Channel Here>'
 Ustream: '<Ustream Channel Here>'
 Hitbox: '<Hitbox Channel Here>'
+
+# Set Prefix for The Messages Can use Minecraft Color Codes.
 prefix: '&7[&c&lYou&f&lTuber&7]'

@@ -15,7 +15,7 @@
  *
  */
 
-package com.domnian.util;
+package com.domnian.mcutils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
