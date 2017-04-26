@@ -1,5 +1,6 @@
 package us.mcthemeparks.youtube;
 
+import co.aikar.commands.ACF;
 import com.domnian.util.TaskChain;
 import com.domnian.util.Util;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,10 +18,13 @@ public class YouTubePlus extends JavaPlugin {
         instance = this;
         enableMessage();
         saveDefaultConfig();
-        registerEvents();
-        registerCommands();
-        startMetrics();
-        TaskChain.initialize(this);
+        /*if (YouTubePlusConfig.enableMetrics) startMetrics();
+        new YouTubePlusConfig();
+        ACF.createManager(this).registerCommand(new YouTubePlusCommands());*/
+          registerEvents();
+          registerCommands();
+          startMetrics();
+          TaskChain.initialize(this);
     }
 
     private void enableMessage() {
@@ -28,12 +32,12 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.11-dev                    |");
+        getLogger().info("| Version: 2.12-dev                    |");
         getLogger().info("|======================================|");
     }
 
     private void registerCommands() {
-        getLogger().info("Registering Commands");
+       getLogger().info("Registering Commands");
         getCommand("youtube").setExecutor(new YouTubeExe());
         getCommand("twitch").setExecutor(new TwitchExe());
         getCommand("beam").setExecutor(new BeamExe());
