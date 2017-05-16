@@ -16,5 +16,4 @@ public class Util {
     public static void sendFMsg(Player player, String format, Object... params) {
         Util.sendMsg(player, String.format(format, params));
     }
-
 }

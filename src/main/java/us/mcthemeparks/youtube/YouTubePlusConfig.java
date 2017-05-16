@@ -15,35 +15,17 @@ public class YouTubePlusConfig extends MagicConfig {
         @ConfigNode("Youtube")
         public static String youTube = "<YouTube Link>";
 
-        @ConfigNode("Donate")
-        public static String donate = "<Donation Store>";
+        @ConfigNode("Beam")
+        public static String beam = "<Beam Link>";
 
-        @ConfigNode("Fb")
-        public static String facebook = "<Facebook Page>";
+        @ConfigNode("Ustream")
+        public static String ustream = "<Ustream Link>";
 
-        @ConfigNode("IRCServer")
-        public static String ircServer = "<IRC Server Address & Port>";
+        @ConfigNode("Twitch")
+        public static String twitch = "<Twitch Link>";
 
-        @ConfigNode("IRCChan")
-        public static String ircChannel = "<IRC Channel>";
-
-        @ConfigNode("MServer")
-        public static String mumbleServer = "<Mumble Server Address>";
-
-        @ConfigNode("MPort")
-        public static int mumblePort = 64738;
-
-        @ConfigNode("Skype")
-        public static String skype = "<Skype Group Invite Link>";
-
-        @ConfigNode("TServer")
-        public static String ts3Server = "<Team Speak Server Address>";
-
-        @ConfigNode("TPort")
-        public static int ts3Port = 9987;
-
-        @ConfigNode("Website")
-        public static String website = "<Website Link>";
+        @ConfigNode("Licecoding")
+        public static String liveCoding = "<LiveCoding Link>";
 
     }
 }
