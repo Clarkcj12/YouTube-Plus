@@ -11,3 +11,6 @@ Hitbox: '<Hitbox Channel Here>'
 
 # Set Prefix for The Messages Can use Minecraft Color Codes.
 prefix: '&7[&c&lYou&f&lTuber&7]'
+
+# Metrics Setting (true = enabled, false = disabled)
+metrics: true

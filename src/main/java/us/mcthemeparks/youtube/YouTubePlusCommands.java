@@ -15,4 +15,9 @@ public class YouTubePlusCommands extends BaseCommand {
         Util.sendMsg(player, "&r");
         Util.sendMsg(player, "");
     }
+
+    @CommandAlias("ytp|youtubeplus|yp")
+    public void onHelp(Player player){
+        Util.sendMsg(player, "&6YouTubePlus v&e" + YouTubePlus.instance.getDescription().getVersion() + " &6Commands:");
+    }
 }

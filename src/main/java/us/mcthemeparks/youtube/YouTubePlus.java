@@ -9,16 +9,16 @@ import java.io.IOException;
 
 public class YouTubePlus extends JavaPlugin {
 
-    private static YouTubePlus instance;
+    public static YouTubePlus instance;
 
     @Override
     public void onEnable() {
         instance = this;
         enableMessage();
         saveDefaultConfig();
-        /*if (YouTubePlusConfig.enableMetrics) startMetrics();
+        if (YouTubePlusConfig.enableMetrics) startMetrics();
         new YouTubePlusConfig();
-        ACF.createManager(this).registerCommand(new YouTubePlusCommands());*/
+        /* ACF.createManager(this).registerCommand(new YouTubePlusCommands());*/
           registerEvents();
           registerCommands();
           startMetrics();
