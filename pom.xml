@@ -21,8 +21,8 @@
 
     <repositories>
         <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+            <id>destroystokyo-repo</id>
+            <url>https://repo.destroystokyo.com/repository/maven-public/</url>
         </repository>
         <repository>
             <id>mvdw-software</id>
@@ -37,6 +37,10 @@
             <url>https://ci.emc.gs/nexus/content/groups/aikar/</url>
         </repository>
         <repository>
+            <id>domnian</id>
+            <url>http://68.192.129.170:44015/repository/maven-public/</url>
+        </repository>
+        <repository>
             <id>bstats-repo</id>
             <url>http://repo.bstats.org/content/repositories/releases/</url>
         </repository>
@@ -44,11 +48,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
+            <groupId>com.domnian.paperdragon</groupId>
+            <artifactId>paperdragon</artifactId>
             <version>1.11.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
-    </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.domnian</groupId>
+            <artifactId>mcutils</artifactId>
+            <version>1.11.2-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
@@ -68,7 +78,7 @@
         <dependency>
             <groupId>co.aikar</groupId>
             <artifactId>acf-core</artifactId>
-            <version>0.3.0-SNAPSHOT</version>
+            <version>0.4.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
