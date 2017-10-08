@@ -8,6 +8,9 @@ import com.domnian.mcutils.config.MagicConfig;
 public class YouTubePlusConfig extends MagicConfig {
     public YouTubePlusConfig() {
         super(YouTubePlus.instance, "config", YouTubePlusConfig.class, 2);
+    }
+        @ConfigNode("metrics")
+        public static boolean enableMetrics = true;
 
         @ConfigNode("Youtube")
         public static String youTube = "<YouTube Link>";
@@ -23,5 +26,4 @@ public class YouTubePlusConfig extends MagicConfig {
 
         @ConfigNode("Licecoding")
         public static String liveCoding = "<LiveCoding Link>";
-    }
 }
