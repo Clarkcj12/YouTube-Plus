@@ -17,7 +17,7 @@ public class YouTubePlus extends JavaPlugin {
     public void onEnable() {
         instance = this;
         enableMessage();
-        if (YouTubePlusConfig.enableMetrics) startMetrics();*/
+        if (YouTubePlusConfig.enableMetrics) startMetrics();
         new YouTubePlusConfig();
         ACF.createManager(this).registerCommand(new YouTubePlusCommands());
         TaskChain.initialize(this);
@@ -28,7 +28,7 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.12-dev                    |");
+        getLogger().info("| Version: 2.13-dev                    |");
         getLogger().info("|======================================|");
     }
 
