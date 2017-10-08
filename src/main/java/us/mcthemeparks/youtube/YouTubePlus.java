@@ -1,6 +1,6 @@
 package us.mcthemeparks.youtube;
 
-import co.aikar.commands.ACF;
+import co.aikar.commands.BukkitCommandManager;
 import com.domnian.mcutils.TaskChain;
 import com.domnian.mcutils.Util;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,7 +19,8 @@ public class YouTubePlus extends JavaPlugin {
         enableMessage();
         if (YouTubePlusConfig.enableMetrics) startMetrics();
         new YouTubePlusConfig();
-        ACF.createManager(this).registerCommand(new YouTubePlusCommands());
+        BukkitCommandManager manager = new BukkitCommandManager(this);
+        manager.registerCommand(new YouTubePlusCommands());
         TaskChain.initialize(this);
     }
 
@@ -28,7 +29,7 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("| Plugin: YouTubePlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
-        getLogger().info("| Version: 2.13-dev                    |");
+        getLogger().info("| Version: 2.14-dev                    |");
         getLogger().info("|======================================|");
     }
 
