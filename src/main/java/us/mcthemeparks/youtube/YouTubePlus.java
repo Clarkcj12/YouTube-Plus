@@ -1,5 +1,6 @@
 package us.mcthemeparks.youtube;
 
+import co.aikar.commands.ACF;
 import com.domnian.mcutils.TaskChain;
 import com.domnian.mcutils.Util;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -16,14 +17,10 @@ public class YouTubePlus extends JavaPlugin {
     public void onEnable() {
         instance = this;
         enableMessage();
-        saveDefaultConfig();
-       /* if (YouTubePlusConfig.enableMetrics) startMetrics();*/
+        if (YouTubePlusConfig.enableMetrics) startMetrics();*/
         new YouTubePlusConfig();
-        /* ACF.createManager(this).registerCommand(new YouTubePlusCommands());*/
-          registerEvents();
-          registerCommands();
-          startMetrics();
-          TaskChain.initialize(this);
+        ACF.createManager(this).registerCommand(new YouTubePlusCommands());
+        TaskChain.initialize(this);
     }
 
     private void enableMessage() {
@@ -67,5 +64,4 @@ public class YouTubePlus extends JavaPlugin {
     public static String getPrefix() {
         return Util.color(instance.getConfig().getString("prefix"));
     }
-
 }
