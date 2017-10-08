@@ -7,19 +7,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import us.mcthemeparks.youtube.YouTubePlus;
 
-/**
- * Created by clark on 9/5/2016.
- */
-public class HitBoxExe implements CommandExecutor {
+public class MixerExe implements CommandExecutor {
 
     YouTubePlus main;
     String prefix;
     String serverStream;
 
-    public HitBoxExe() {
+    public MixerExe() {
         this.main = YouTubePlus.getInstance();
         this.prefix = YouTubePlus.getPrefix();
-        this.serverStream = main.getConfig().getString("HitBox");
+        this.serverStream = main.getConfig().getString("Beam");
     }
 
     @Override
@@ -38,13 +35,13 @@ public class HitBoxExe implements CommandExecutor {
                         Bukkit.broadcastMessage(prefix + " " + s.getName() + " is Streaming This Server at \u00A7b" + a[0] + " !");
                     }
                 } else {
-                    s.sendMessage(prefix + " \u00A76Our Server's Hitbox Channel is: \u00A7b" + serverStream);
+                    s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
                 }
             } else {
-                s.sendMessage(prefix + " \u00A76Our Server's Hitbox Channel is: \u00A7b" + serverStream);
+                s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
             }
         } else {
-            s.sendMessage(prefix + " \u00A76Our Server's Hitbox Channel is: \u00A7b" + serverStream);
+            s.sendMessage(prefix + " \u00A76Our Server's Beam Channel is: \u00A7b" + serverStream);
         }
         return true;
     }

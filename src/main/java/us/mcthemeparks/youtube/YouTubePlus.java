@@ -36,10 +36,10 @@ public class YouTubePlus extends JavaPlugin {
        getLogger().info("Registering Commands");
         getCommand("youtube").setExecutor(new YouTubeExe());
         getCommand("twitch").setExecutor(new TwitchExe());
-        getCommand("beam").setExecutor(new BeamExe());
+        getCommand("mixer").setExecutor(new MixerExe());
         getCommand("ustream").setExecutor(new UstreamExe());
         getCommand("LiveCoding").setExecutor(new LivecodingExe());
-        getCommand("hitbox").setExecutor(new HitBoxExe());
+        getCommand("smashcast").setExecutor(new SmashCastExe());
         getCommand("ytpversion").setExecutor(new VersionExe());
     }
 
