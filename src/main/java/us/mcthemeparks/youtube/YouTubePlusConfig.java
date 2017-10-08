@@ -15,8 +15,8 @@ public class YouTubePlusConfig extends MagicConfig {
         @ConfigNode("Youtube")
         public static String youTube = "<YouTube Link>";
 
-        @ConfigNode("Beam")
-        public static String beam = "<Beam Link>";
+        @ConfigNode("Mixer")
+        public static String mixer = "<Mixer Link>";
 
         @ConfigNode("Ustream")
         public static String ustream = "<Ustream Link>";
@@ -26,4 +26,7 @@ public class YouTubePlusConfig extends MagicConfig {
 
         @ConfigNode("Licecoding")
         public static String liveCoding = "<LiveCoding Link>";
+
+        @ConfigNode("SmashCast")
+        public static String smashCast = "<SmashCast Link>";
 }
