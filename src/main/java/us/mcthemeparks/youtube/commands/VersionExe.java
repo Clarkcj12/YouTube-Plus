@@ -30,7 +30,7 @@ public class VersionExe implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender s, Command c, String commandLabel, String[] a){
         if (s instanceof Player) {
-            s.sendMessage(this.prefix + ChatColor.GREEN + " Version " + ChatColor.GOLD + ": " + ChatColor.RED + "2.11");
+            s.sendMessage(this.prefix + ChatColor.GREEN + " Version " + ChatColor.GOLD + ": " + ChatColor.RED + "2.13");
         }
         return true;
     }
