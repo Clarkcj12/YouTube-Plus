@@ -7,6 +7,7 @@ import us.mcthemeparks.youtube.commands.*;
 
 import java.io.IOException;
 
+@SuppressWarnings({"unused", "deprecated"})
 public class YouTubePlus extends JavaPlugin {
 
     public static YouTubePlus instance;
@@ -16,7 +17,7 @@ public class YouTubePlus extends JavaPlugin {
         instance = this;
         enableMessage();
         saveDefaultConfig();
-        if (YouTubePlusConfig.enableMetrics) startMetrics();
+       /* if (YouTubePlusConfig.enableMetrics) startMetrics();*/
         new YouTubePlusConfig();
         /* ACF.createManager(this).registerCommand(new YouTubePlusCommands());*/
           registerEvents();

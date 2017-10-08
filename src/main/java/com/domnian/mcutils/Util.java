@@ -16,4 +16,10 @@ public class Util {
     public static void sendFMsg(Player player, String format, Object... params) {
         Util.sendMsg(player, String.format(format, params));
     }
+
+    public static void printException(String error_with_contacting_twitch_api, Exception e) {
+    }
+
+    public static void log(String s) {
+    }
 }
