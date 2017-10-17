@@ -4,7 +4,6 @@ import co.aikar.commands.BukkitCommandManager;
 import com.domnian.mcutils.TaskChain;
 import com.domnian.mcutils.Util;
 import org.bukkit.plugin.java.JavaPlugin;
-import us.mcthemeparks.youtube.commands.*;
 
 import java.io.IOException;
 
@@ -33,16 +32,16 @@ public class YouTubePlus extends JavaPlugin {
         getLogger().info("|======================================|");
     }
 
-    private void registerCommands() {
-       getLogger().info("Registering Commands");
-        getCommand("youtube").setExecutor(new YouTubeExe());
-        getCommand("twitch").setExecutor(new TwitchExe());
-        getCommand("mixer").setExecutor(new MixerExe());
-        getCommand("ustream").setExecutor(new UstreamExe());
-        getCommand("LiveCoding").setExecutor(new LivecodingExe());
-        getCommand("smashcast").setExecutor(new SmashCastExe());
-        getCommand("ytpversion").setExecutor(new VersionExe());
-    }
+//    private void registerCommands() {
+//       getLogger().info("Registering Commands");
+//        getCommand("youtube").setExecutor(new YouTubeExe());
+//        getCommand("twitch").setExecutor(new TwitchExe());
+//        getCommand("mixer").setExecutor(new MixerExe());
+//        getCommand("ustream").setExecutor(new UstreamExe());
+//        getCommand("LiveCoding").setExecutor(new LivecodingExe());
+//        getCommand("smashcast").setExecutor(new SmashCastExe());
+//        getCommand("ytpversion").setExecutor(new VersionExe());
+//    }
 
     private void registerEvents() {
 

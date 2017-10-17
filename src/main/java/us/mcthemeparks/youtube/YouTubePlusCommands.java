@@ -2,6 +2,8 @@ package us.mcthemeparks.youtube;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
+import co.aikar.commands.annotation.CommandPermission;
+import co.aikar.commands.annotation.Subcommand;
 import com.domnian.mcutils.Util;
 import org.bukkit.entity.Player;
 
@@ -16,8 +18,14 @@ public class YouTubePlusCommands extends BaseCommand {
         Util.sendMsg(player, "");
     }
 
+    @Subcommand("server")
+    @CommandPermission("ytp.server")
+    public void onServer(Player player) {
+        Util.sendMsg(player, YouTubePlusConfig.prefix + "This server is being recorded at \u00A7b" + YouTubePlusConfig.youTube + " !");
+    }
+
     @CommandAlias("ytpheko|ytp|youtubeplus")
-       public void onHelp(Player player) {
+    public void onHelp(Player player) {
         Util.sendMsg(player, "&6YouTube Plus v&e" + YouTubePlus.instance.getDescription().getVersion() + " &6Commands:");
         Util.sendMsg(player, "&b-» &a/discord [invite] &6- &8 Display Discord Invite Link");
         Util.sendMsg(player, "&b-» &a/donate &6- &8Display Link to Donation Store");

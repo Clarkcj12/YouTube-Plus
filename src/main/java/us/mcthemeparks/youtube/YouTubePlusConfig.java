@@ -24,9 +24,12 @@ public class YouTubePlusConfig extends MagicConfig {
         @ConfigNode("Twitch")
         public static String twitch = "<Twitch Link>";
 
-        @ConfigNode("Licecoding")
+        @ConfigNode("Livecoding")
         public static String liveCoding = "<LiveCoding Link>";
 
         @ConfigNode("SmashCast")
         public static String smashCast = "<SmashCast Link>";
+
+        @ConfigNode("prefix")
+        public static String prefix = "&7[&c&lYou&f&lTuber&7]";
 }
