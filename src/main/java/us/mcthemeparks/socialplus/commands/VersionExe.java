@@ -1,11 +1,11 @@
-package us.mcthemeparks.youtube.commands;
+package us.mcthemeparks.socialplus.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import us.mcthemeparks.youtube.YouTubePlus;
+import us.mcthemeparks.socialplus.SocialPlus;
 
 /**
  * ==================================================================
@@ -18,13 +18,13 @@ import us.mcthemeparks.youtube.YouTubePlus;
  * ==================================================================
  */
 public class VersionExe implements CommandExecutor {
-    YouTubePlus main;
+    SocialPlus main;
     String prefix;
 
     public VersionExe() {
 
-        this.main = YouTubePlus.getInstance();
-        this.prefix = YouTubePlus.getPrefix();
+        this.main = SocialPlus.getInstance();
+        this.prefix = SocialPlus.getPrefix();
     }
 
     @Override

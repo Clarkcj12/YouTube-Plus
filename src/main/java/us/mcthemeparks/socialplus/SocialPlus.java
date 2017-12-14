@@ -1,4 +1,4 @@
-package us.mcthemeparks.youtube;
+package us.mcthemeparks.socialplus;
 
 import co.aikar.commands.BukkitCommandManager;
 import com.domnian.mcutils.TaskChain;
@@ -8,24 +8,24 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.IOException;
 
 @SuppressWarnings({"unused", "deprecated"})
-public class YouTubePlus extends JavaPlugin {
+public class SocialPlus extends JavaPlugin {
 
-    public static YouTubePlus instance;
+    public static SocialPlus instance;
 
     @Override
     public void onEnable() {
         instance = this;
         enableMessage();
-        if (YouTubePlusConfig.enableMetrics) startMetrics();
-        new YouTubePlusConfig();
+        if (SocialConfig.enableMetrics) startMetrics();
+        new SocialConfig();
         BukkitCommandManager manager = new BukkitCommandManager(this);
-        manager.registerCommand(new YouTubePlusCommands());
+        manager.registerCommand(new SocialPlusCommands());
         TaskChain.initialize(this);
     }
 
     private void enableMessage() {
         getLogger().info("|======================================|");
-        getLogger().info("| Plugin: YouTubePlus                  |");
+        getLogger().info("| Plugin: SocialPlus                  |");
         getLogger().info("| Created By: Clarkcj                  |");
         getLogger().info("| Contributions By: willies952002      |");
         getLogger().info("| Version: 2.14-dev                    |");
@@ -57,7 +57,7 @@ public class YouTubePlus extends JavaPlugin {
         }
     }
 
-    public static YouTubePlus getInstance() {
+    public static SocialPlus getInstance() {
         return instance;
     }
 
