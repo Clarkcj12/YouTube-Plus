@@ -17,6 +17,11 @@
             <name>William Surgeon</name>
             <email>admin@domnian.com</email>
         </developer>
+        <developer>
+            <id>GreenMeanie</id>
+            <name>Derek Williams</name>
+            <email>GreenMeanieMC@gmail.com</email>
+        </developer>
     </developers>
 
     <repositories>
