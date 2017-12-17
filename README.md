@@ -1,4 +1,4 @@
-# YouTube-Plus
+# Social Plus
 The plugin allows you to be able to currently three Commands.
 
 /twitch When run sends the player that started the command a message with the Twitch Channel of the server.
