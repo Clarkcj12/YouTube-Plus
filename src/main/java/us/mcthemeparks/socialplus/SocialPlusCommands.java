@@ -1,4 +1,4 @@
-package us.mcthemeparks.youtube;
+package us.mcthemeparks.socialplus;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 /**
  * Created by Corey on 4/26/2017.
  */
-public class YouTubePlusCommands extends BaseCommand {
+public class SocialPlusCommands extends BaseCommand {
 
     @CommandAlias("youtube")
     public void onYoutube(Player player) {
@@ -21,12 +21,12 @@ public class YouTubePlusCommands extends BaseCommand {
     @Subcommand("server")
     @CommandPermission("ytp.server")
     public void onServer(Player player) {
-        Util.sendMsg(player, YouTubePlusConfig.prefix + "This server is being recorded at \u00A7b" + YouTubePlusConfig.youTube + " !");
+        Util.sendMsg(player, SocialConfig.prefix + "This server is being recorded at \u00A7b" + SocialConfig.youTube + " !");
     }
 
     @CommandAlias("ytpheko|ytp|youtubeplus")
     public void onHelp(Player player) {
-        Util.sendMsg(player, "&6YouTube Plus v&e" + YouTubePlus.instance.getDescription().getVersion() + " &6Commands:");
+        Util.sendMsg(player, "&6YouTube Plus v&e" + SocialPlus.instance.getDescription().getVersion() + " &6Commands:");
         Util.sendMsg(player, "&b-» &a/discord [invite] &6- &8 Display Discord Invite Link");
         Util.sendMsg(player, "&b-» &a/donate &6- &8Display Link to Donation Store");
         Util.sendMsg(player, "&b-» &a/facebook &6- &8Display Link to Facebook Page");

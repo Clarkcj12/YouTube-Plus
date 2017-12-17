@@ -1,7 +1,7 @@
-name: YoutubePlus
-main: us.mcthemeparks.youtube.YouTubePlus
+name: SocialPlus
+main: us.mcthemeparks.socialplus.SocialPlus
 version: 2.14-dev
-authors: [Clarkcj, willies952002]
+authors: [Clarkcj, willies952002, GreenMeanie]
 
 description: Tells The Players What the Server's YouTube/Twitch Channel is, also if someone is streaming/recording.
 commands:

@@ -8,7 +8,7 @@
  * void any agreements with you, the third party. Thanks
  * ==================================================================
  */
-package us.mcthemeparks.youtube.experimental;
+package us.mcthemeparks.socialplus.experimental;
 
 public class Streamer {
 

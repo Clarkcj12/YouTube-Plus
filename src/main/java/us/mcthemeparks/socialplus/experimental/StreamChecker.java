@@ -8,12 +8,12 @@
  * void any agreements with you, the third party. Thanks
  * ==================================================================
  */
-package us.mcthemeparks.youtube.experimental;
+package us.mcthemeparks.socialplus.experimental;
 
 import com.domnian.mcutils.TaskChain;
 import com.domnian.mcutils.Util;
 import org.json.JSONObject;
-import us.mcthemeparks.youtube.YouTubePlus;
+import us.mcthemeparks.socialplus.SocialPlus;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -62,7 +62,7 @@ public class StreamChecker implements Runnable {
 
     private TaskChain.GenericTask callTwitch() {
         return () -> {
-            List<String> streamers = YouTubePlus.getInstance().getConfig().getStringList("streamers.twitch");
+            List<String> streamers = SocialPlus.getInstance().getConfig().getStringList("streamers.twitch");
             HashMap<String, JSONObject> info = new HashMap<>();
             streamers.forEach((name) -> {
                 try {
