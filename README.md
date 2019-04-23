@@ -20,7 +20,7 @@ It is able to be configured with three fields.
 * ytp.s - Allows usage of the streaming command
 * ytp.r - Allows usage of the recording command
 
-# #Change Log
+## Change Log
 * v2.2-dev - Version Bump, added new Beam Command for Beam Channels
 * v2.1-dev - Minor Version Bump with some protocol changes.
 * v2.0-dev - Added some experimential features.
