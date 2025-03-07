@@ -3,6 +3,8 @@ package us.mcthemeparks.socialplus;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import com.domnian.mcutils.Util;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.entity.Player;
 
 public class SocialPlusCommands extends BaseCommand {
@@ -12,6 +14,12 @@ public class SocialPlusCommands extends BaseCommand {
     public void onYoutube(@Single Player player) {
         var youtubeLink = SocialConfig.youTube;
         var prefix = SocialConfig.prefix;
+
+        player.sendMessage(Component.text()
+                .append(serializeColor(prefix))
+                .append(Component.text(" Our YouTube channel: ", WHITE))
+                .append(Component.text(youtubeLink, AQUA))
+        );
     }
 
     @Subcommand("server")
@@ -33,4 +41,13 @@ public class SocialPlusCommands extends BaseCommand {
         Util.sendMsg(player, "&b-» &a/ts3 [get] &6- &8Alias of /teamspeak");
         Util.sendMsg(player, "&b-» &a/website &6- &8Display Server Website");
     }
+
+    /**
+     * Convert prefixed legacy text to an Adventure Component.
+     */
+    private Component serializeColor(String message) {
+        return LegacyComponentSerializer.legacyAmpersand().deserialize(message);
+    }
+}
+
 }
