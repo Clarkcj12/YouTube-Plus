@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
  */
 public class SocialPlusCommands extends BaseCommand {
 
-    @CommandAlias("youtube")
+    @CommandAlias("youtube|yt")
     public void onYoutube(Player player) {
         Util.sendMsg(player, "&r");
         Util.sendMsg(player, "");
@@ -26,7 +26,7 @@ public class SocialPlusCommands extends BaseCommand {
 
     @CommandAlias("ytpheko|ytp|youtubeplus")
     public void onHelp(Player player) {
-        Util.sendMsg(player, "&6YouTube Plus v&e" + SocialPlus.instance.getDescription().getVersion() + " &6Commands:");
+        Util.sendMsg(player, "&6YouTube Plus v&e" + SocialPlus.getInstance().getDescription().getVersion() + " &6Commands:");
         Util.sendMsg(player, "&b-» &a/discord [invite] &6- &8 Display Discord Invite Link");
         Util.sendMsg(player, "&b-» &a/donate &6- &8Display Link to Donation Store");
         Util.sendMsg(player, "&b-» &a/facebook &6- &8Display Link to Facebook Page");
