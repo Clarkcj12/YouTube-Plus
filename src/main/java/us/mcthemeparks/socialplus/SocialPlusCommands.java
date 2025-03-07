@@ -38,18 +38,25 @@ public class SocialPlusCommands extends BaseCommand {
         player.sendMessage(message);
     }
 
-    @CommandAlias("ytpheko|ytp|youtubeplus")
-    public void onHelp(Player player) {
-        Util.sendMsg(player, "&6YouTube Plus v&e" + SocialPlus.getInstance().getDescription().getVersion() + " &6Commands:");
-        Util.sendMsg(player, "&b-» &a/discord [invite] &6- &8 Display Discord Invite Link");
-        Util.sendMsg(player, "&b-» &a/donate &6- &8Display Link to Donation Store");
-        Util.sendMsg(player, "&b-» &a/facebook &6- &8Display Link to Facebook Page");
-        Util.sendMsg(player, "&b-» &a/irc &6- &8Display IRC Server & Channel Information");
-        Util.sendMsg(player, "&b-» &a/mumble [get] &6- &8Display Mumble Server Information");
-        Util.sendMsg(player, "&b-» &a/skype &6- &8Display Skype Group Invite Link");
-        Util.sendMsg(player, "&b-» &a/teamspeak [get] &6- &8Display TeamSpeak Server Information");
-        Util.sendMsg(player, "&b-» &a/ts3 [get] &6- &8Alias of /teamspeak");
-        Util.sendMsg(player, "&b-» &a/website &6- &8Display Server Website");
+    @CommandAlias("youtubeplus|ytp|ytphelp")
+    @Description("Display help for all SocialPlus commands.")
+    @Default
+    public void onHelp(@Single Player player) {
+        var helpMessages = """
+                &6YouTube Plus v&e%s Commands:
+                &b-» &a/discord [invite] &6- &8Display Discord Invite Link
+                &b-» &a/donate &6- &8Display Link to Donation Store
+                &b-» &a/facebook &6- &8Display Facebook Page Link
+                &b-» &a/irc &6- &8Display IRC Server/Channel Info
+                &b-» &a/mumble [get] &6- &8Display Mumble Server Info
+                &b-» &a/skype &6- &8Display Skype Group Invite Link
+                &b-» &a/teamspeak [get] &6- &8TeamSpeak Server Info
+                &b-» &a/ts3 [get] &6- &8Alias for /teamspeak
+                &b-» &a/website &6- &8Display Server Website
+                """.formatted(SocialPlus.getInstance().getDescription().getVersion());
+
+        var message = LegacyComponentSerializer.legacyAmpersand().deserialize(helpMessages);
+        player.sendMessage(message);
     }
 
     /**
