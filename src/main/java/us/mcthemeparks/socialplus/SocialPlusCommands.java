@@ -1,10 +1,7 @@
 package us.mcthemeparks.socialplus;
 
 import co.aikar.commands.BaseCommand;
-import co.aikar.commands.annotation.CommandAlias;
-import co.aikar.commands.annotation.CommandPermission;
-import co.aikar.commands.annotation.Description;
-import co.aikar.commands.annotation.Subcommand;
+import co.aikar.commands.annotation.*;
 import com.domnian.mcutils.Util;
 import org.bukkit.entity.Player;
 
@@ -12,9 +9,9 @@ public class SocialPlusCommands extends BaseCommand {
 
     @CommandAlias("youtube|yt")
     @Description("Get the link to the server's YouTube channel.")
-    public void onYoutube(Player player) {
-        Util.sendMsg(player, "&r");
-        Util.sendMsg(player, "");
+    public void onYoutube(@Single Player player) {
+        var youtubeLink = SocialConfig.youTube;
+        var prefix = SocialConfig.prefix;
     }
 
     @Subcommand("server")
