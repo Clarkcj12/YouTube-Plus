@@ -8,7 +8,7 @@ import com.domnian.mcutils.config.MagicConfig;
  */
 public class SocialConfig extends MagicConfig {
     public SocialConfig() {
-        super(SocialPlus.instance, "config", SocialConfig.class, 2);
+        super(SocialPlus.getInstance(), "config", SocialConfig.class, 2);
     }
         @ConfigNode("metrics")
         public static boolean enableMetrics = true;
