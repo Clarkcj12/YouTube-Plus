@@ -16,9 +16,6 @@ public class SocialConfig extends MagicConfig {
         @ConfigNode("Youtube")
         public static String youTube = "<YouTube Link>";
 
-        @ConfigNode("Mixer")
-        public static String mixer = "<Mixer Link>";
-
         @ConfigNode("Ustream")
         public static String ustream = "<Ustream Link>";
 
