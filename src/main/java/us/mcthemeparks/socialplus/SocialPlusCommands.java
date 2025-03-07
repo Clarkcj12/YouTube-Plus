@@ -7,6 +7,9 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.entity.Player;
 
+import static net.kyori.adventure.text.format.NamedTextColor.AQUA;
+import static net.kyori.adventure.text.format.NamedTextColor.WHITE;
+
 public class SocialPlusCommands extends BaseCommand {
 
     @CommandAlias("youtube|yt")
@@ -24,8 +27,15 @@ public class SocialPlusCommands extends BaseCommand {
 
     @Subcommand("server")
     @CommandPermission("ytp.server")
-    public void onServer(Player player) {
-        Util.sendMsg(player, SocialConfig.prefix + "This server is being recorded at \u00A7b" + SocialConfig.youTube + " !");
+    @Description("Provide server recording information.")
+    public void onServer(@Single Player player) {
+        var message = Component.text()
+                .append(serializeColor(SocialConfig.prefix))
+                .append(Component.text(" This server is being recorded at: ", WHITE))
+                .append(Component.text(SocialConfig.youTube, AQUA))
+                .append(Component.text("!", WHITE));
+
+        player.sendMessage(message);
     }
 
     @CommandAlias("ytpheko|ytp|youtubeplus")
@@ -48,6 +58,4 @@ public class SocialPlusCommands extends BaseCommand {
     private Component serializeColor(String message) {
         return LegacyComponentSerializer.legacyAmpersand().deserialize(message);
     }
-}
-
 }
